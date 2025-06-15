@@ -1,0 +1,78 @@
+html, body, #root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+/* Diseño general con grid */
+.carito {
+    display: flex;
+    justify-content:space-evenly;
+    margin: 10%;  
+}
+.imagen{
+    height: 240px;
+    width: 300px;
+    border-radius: 50%;
+}
+.texto {margin: 5%;
+    font-size: 30px;
+    font-style:italic;
+}
+.layout {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-areas:
+        "caja1  caja1 caja1 caja1"
+        "caja2  caja2 caja2 caja2"
+        "caja3  caja3 caja3 caja3"
+        "caja3  caja3 caja3 caja3"
+        "caja3  caja3 caja3 caja3"
+        "caja3  caja3 caja3 caja3"
+        "caja3  caja3 caja3 caja3"
+        "caja4  caja4 caja caja";
+}
+/* Caja1 = encabezado */
+.caja1 {
+    grid-area: caja1;
+    background-color:rgb(4, 170, 170);
+    color: white;
+    font-size: 25px;
+}
+/* Caja2 = menú lateral */
+.caja2 {
+    grid-area: caja2;
+    background-color:rgb(37, 41, 53);
+    font-size: 30px;
+    color: white;
+    
+}
+.caja2 ul {
+    display: flex;
+    list-style: none;
+    margin: 12px;
+    gap: 1rem;
+}
+/* Caja3 = contenido principal */
+.caja3 {
+    grid-area: caja3;
+    background-color:rgb(230, 231, 231);
+}
+/* Caja4 = pie de página */
+.caja4 {
+    grid-area: caja4;
+    background-color:rgb(14, 54, 129);
+    color: white;
+    text-align: center;
+}
+.caja {
+    grid-area: caja;
+    background-color:rgb(4, 109, 109);
+    color: white;
+    text-align: center;
+}
+.botones{
+    display: flex;
+    margin: 5%;
+    justify-content:space-evenly;
+}
